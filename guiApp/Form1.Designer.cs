@@ -39,7 +39,7 @@
             this.clearAllBtn = new System.Windows.Forms.Button();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
             this.mirrorCenterX = new System.Windows.Forms.Button();
-            this.MirrorCenterY = new System.Windows.Forms.Button();
+            this.mirrorCenterY = new System.Windows.Forms.Button();
             this.decreaseY = new System.Windows.Forms.Button();
             this.moveDown = new System.Windows.Forms.Button();
             this.moveUp = new System.Windows.Forms.Button();
@@ -153,7 +153,7 @@
             // groupBox2
             // 
             this.groupBox2.Controls.Add(this.mirrorCenterX);
-            this.groupBox2.Controls.Add(this.MirrorCenterY);
+            this.groupBox2.Controls.Add(this.mirrorCenterY);
             this.groupBox2.Controls.Add(this.decreaseY);
             this.groupBox2.Controls.Add(this.moveDown);
             this.groupBox2.Controls.Add(this.moveUp);
@@ -186,15 +186,15 @@
             // 
             // MirrorCenterY
             // 
-            this.MirrorCenterY.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
-            this.MirrorCenterY.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("MirrorCenterY.BackgroundImage")));
-            this.MirrorCenterY.Location = new System.Drawing.Point(6, 225);
-            this.MirrorCenterY.Name = "MirrorCenterY";
-            this.MirrorCenterY.Size = new System.Drawing.Size(91, 30);
-            this.MirrorCenterY.TabIndex = 10;
-            this.MirrorCenterY.Text = "⇅";
-            this.MirrorCenterY.UseVisualStyleBackColor = true;
-            this.MirrorCenterY.Click += new System.EventHandler(this.MirrorCenterY_Click);
+            this.mirrorCenterY.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
+            this.mirrorCenterY.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("MirrorCenterY.BackgroundImage")));
+            this.mirrorCenterY.Location = new System.Drawing.Point(6, 225);
+            this.mirrorCenterY.Name = "MirrorCenterY";
+            this.mirrorCenterY.Size = new System.Drawing.Size(91, 30);
+            this.mirrorCenterY.TabIndex = 10;
+            this.mirrorCenterY.Text = "⇅";
+            this.mirrorCenterY.UseVisualStyleBackColor = true;
+            this.mirrorCenterY.Click += new System.EventHandler(this.MirrorCenterY_Click);
             // 
             // decreaseY
             // 
@@ -363,7 +363,7 @@
         private System.Windows.Forms.RadioButton selectBtn;
         private System.Windows.Forms.Button turn60cw;
         private System.Windows.Forms.Button increaseY;
-        private System.Windows.Forms.Button MirrorCenterY;
+        private System.Windows.Forms.Button mirrorCenterY;
         private System.Windows.Forms.Button decreaseY;
         private System.Windows.Forms.Button mirrorCenterX;
         private System.Windows.Forms.Button turn60;

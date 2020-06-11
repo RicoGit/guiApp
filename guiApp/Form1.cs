@@ -11,6 +11,7 @@ namespace guiApp
         {
             InitializeComponent();
             g = pictureBox.CreateGraphics(); // graphic initialization
+            SwitchControls(false);
         }
 
         // Graphics
@@ -38,6 +39,7 @@ namespace guiApp
 
         Mode mode = Mode.Ln; // set default mode
 
+
         // Clear scene
         private void ClearAll() { g.Clear(Color.White); }
 
@@ -45,7 +47,11 @@ namespace guiApp
         private void DrawAll() { ClearAll(); objects.ForEach(o => o.Draw()); }
 
         // Unselect all objects
-        void UnselectAll() { objects.ForEach(o => o.UnSelect()); }
+        void UnselectAll()
+        {
+            objects.ForEach(o => o.UnSelect());
+            SwitchControls(false);
+        }
 
         //
         // Trasformations
@@ -125,7 +131,7 @@ namespace guiApp
                         if (idx == -1) return;
                         Obj obj = objects[idx];
                         obj.Select();
-
+                        SwitchControls(true);
                     }
                     break;
             }
@@ -207,6 +213,23 @@ namespace guiApp
 
         // Select btn handler
         private void Select_Click(object sender, EventArgs e) { this.mode = Mode.Sel; }
+
+        private void SwitchControls(bool enabled)
+        {
+            delete.Enabled = enabled;
+            turn60cw.Enabled = enabled;
+            turn60.Enabled = enabled;
+            moveLeft.Enabled = enabled;
+            moveRight.Enabled = enabled;
+            moveUp.Enabled = enabled;
+            moveDown.Enabled = enabled;
+            mirrorCenterX.Enabled = enabled;
+            mirrorCenterY.Enabled = enabled;
+            increaseY.Enabled = enabled;
+            decreaseY.Enabled = enabled;
+            color.Enabled = !enabled;
+            width.Enabled = !enabled;
+        }
 
         // Remove selected bnt handler
         private void Delete_Click(object sender, EventArgs e) { objects.RemoveAll(o => o.IsSelected()); DrawAll(); }
