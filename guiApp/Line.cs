@@ -35,9 +35,11 @@ namespace guiApp
             int x2 = (int)vertexList.Last().X;
             int y2 = (int)vertexList.Last().Y;
 
-            int x, y, dx, dy, Sx = 0, Sy = 0; int F = 0, Fx = 0, dFx = 0, Fy = 0, dFy = 0; dx = x2 - x1; dy = y2 - y1;
+            int x, y, dx, dy, Sx = 0, Sy = 0; int F = 0, Fx = 0, dFx = 0, Fy = 0, dFy = 0; 
+            dx = x2 - x1; dy = y2 - y1;
             Sx = Math.Sign(dx); Sy = Math.Sign(dy);
-            if (Sx > 0) dFx = dy; else dFx = -dy; if (Sy > 0) dFy = dx; else dFy = -dx;
+            if (Sx > 0) dFx = dy; else dFx = -dy; 
+            if (Sy > 0) dFy = dx; else dFy = -dx;
             x = x1; y = y1; F = 0;
             if (Math.Abs(dx) >= Math.Abs(dy)) // angle <= 45 
             {

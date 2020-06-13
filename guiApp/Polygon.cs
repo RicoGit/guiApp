@@ -16,14 +16,14 @@ namespace guiApp
         // width and height of canvas
         protected int height;
         protected int width;
-        // list for primitive parties
-        protected List<side> sides;
         protected bool isSelected = false;
         protected Color prevColor;
 
         // arrays of left and right boundaries of primitive section segments
         readonly List<int> Xl = new List<int>();
         readonly List<int> Xr = new List<int>();
+        // list for primitive parties
+        protected List<side> sides;
 
         // structure for implementing the primitive side
         public struct side
